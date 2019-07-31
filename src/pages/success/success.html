@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-row class="headerbg" style="padding-top: 10px;"> 
+        <ion-title>
+          <div class="toggle_btn_sec">
+            <button ion-button menuToggle>
+                <ion-icon name="menu"></ion-icon> 
+              </button>
+            </div>      
+        </ion-title>
+        <div class="headerLogo"><img src="assets/imgs/art/logo.png" alt="artomatic"></div>
+          <ion-buttons end>
+        <button ion-button (click)="logout()">
+          <ion-icon name="log-out"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-row>
+  </ion-header>
+  
+  <ion-content class="success">
+     <div class="midBoxCont textCenter">
+       <div class="info success">
+          <ion-icon name="checkmark-circle" class="primary"></ion-icon>
+          <h1>Welcome</h1>
+          <p class="mt0">Your request is successful.</p>
+        </div>
+
+
+        <div class="status">
+          <dl *ngIf="userdetail"><dt>Space:</dt><dd><strong>{{ userdetail.space_name }}</strong></dd></dl>
+          <dl><dt>Time:</dt><dd><strong>{{ userdetail.space_time }}</strong></dd></dl>
+        </div>
+     </div>
+  </ion-content>

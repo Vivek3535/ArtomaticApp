@@ -1,0 +1,16 @@
+page-login {
+  .top-icons { text-align: left; padding: 0 15px; color:#424242;  text-transform: capitalize;}
+  .top-icons button {background: transparent; box-shadow: none; padding: 0; text-transform: capitalize; font-weight: normal;color:#424242;}
+  .top-icons button:hover {background: transparent !important;}
+  .login_sec {position: absolute;left: 0;right: 0;text-align: center;}
+  .bg {width: 100%; background: url(../assets/imgs/img_login_bg.png) no-repeat; background-size: cover;}
+  img.logo_img {max-width: 160px;}
+  .login_sec hr {background: #e8e8e8;margin-top: 20px; margin-bottom: 20px;}
+  .signup-col {width: 100%;}
+  .signup-col .redbtn, .bluebtn{margin: 20px 0;}
+  .login-box .text-input{background: #f1f1f1;color:#212121;border:solid 1px #c8c7cc; border-radius: 50rem; padding: 12px 16px; margin-right: 0;}
+  .login-box p{color: #424242; margin: 0;}
+  .login-box form p{text-align: right; padding-right: 15px;}
+  .login-box form p a{color:#424242; text-decoration: none;} 
+  .login-box form p a:hover{text-decoration: underline;}  
+  }

@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-row class="headerbg" style="padding-top: 10px;"> 
+      <ion-title>
+        <div class="toggle_btn_sec">
+          <button ion-button menuToggle>
+              <ion-icon name="menu"></ion-icon> 
+            </button>
+          </div>      
+      </ion-title>
+      <div class="headerLogo"><img src="assets/imgs/art/logo.png" alt="artomatic"></div>
+        <ion-buttons end>
+      <button ion-button (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-row>
+</ion-header>
+
+<ion-content class="home">
+   <div class="midBoxCont textCenter">
+      <div class="bdrBox">
+        <h3>Space</h3>
+
+        <div class="boxCont">
+            <button ion-button class="blackbtn" (click)="scan()">Scan</button>
+        </div>
+          <div *ngIf="scannedData">
+              <p>
+                  Space details  : <b>{{ scannedData["text"] }}</b>
+              </p>
+              <p>
+                  Scanned Code Format : <b>{{ scannedData["format"] }}</b>
+              </p>
+          </div>
+      </div>
+
+      <div class="bdrBox">
+          <h3 class="red">User</h3>
+          <div class="boxCont">
+              <button ion-button class="blackbtn" (click)="userscan()">Scan</button>
+          </div>
+          <div *ngIf="scannedUserData">
+              <p>
+                  User details  : <b>{{ scannedUserData["text"] }}</b>
+              </p>
+              <p>
+                  Scanned Code Format : <b>{{ scannedUserData["format"] }}</b>
+              </p>
+          </div>
+      </div>
+      <div class="mtop">
+        <button class="bluebtn" ion-button (click)="gotoSuccess()">Submit</button>
+        <button class="blackbtn" ion-button (click)="gotoFail();">Close</button>
+      </div>
+   </div>
+</ion-content>
